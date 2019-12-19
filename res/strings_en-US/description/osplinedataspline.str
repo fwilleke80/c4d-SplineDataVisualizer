@@ -2,7 +2,7 @@ STRINGTABLE Osplinedataspline
 {
 	Osplinedataspline        "SplineData Spline";
 
-	OSPLINEDATA_SPLINECURVE  "SpineData";
+	OSPLINEDATA_SPLINECURVE  "SplineData";
 	OSPLINEDATA_WIDTH        "Width";
 	OSPLINEDATA_HEIGHT       "Height";
 	OSPLINEDATA_SUBDIVISION  "Subdivisions";
