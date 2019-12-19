@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="generated">
+      <UniqueIdentifier>{88B4AB70-6575-5E4F-0000-5284111A998F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generated\hxx">
+      <UniqueIdentifier>{88B4AB70-6575-5E4F-8ACC-618A6830A19B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{88B4AB70-6575-5E4F-0000-00000001B8A0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\description">
+      <UniqueIdentifier>{88B4AB70-6575-5E4F-9C54-D849A21EBAC0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{88B4AB70-6575-5E4F-0000-0000CA90681B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\object">
+      <UniqueIdentifier>{88B4AB70-6575-5E4F-1194-B70568284220}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\generated\hxx\interface_registration.cpp">
+      <Filter>generated\hxx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generated\hxx\register.cpp">
+      <Filter>generated\hxx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\object\objectdata_splinedataspline.cpp">
+      <Filter>source\object</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\res\c4d_symbols.h">
+      <Filter>res</Filter>
+    </ClInclude>
+    <ClInclude Include="..\res\description\osplinedataspline.h">
+      <Filter>res\description</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\main.h">
+      <Filter>source</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
