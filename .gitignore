@@ -2,6 +2,7 @@ generated
 xcshareddata
 xcuserdata
 
+*.xcworkspace
 *.txt
 *.xlib
 *.xdl64
