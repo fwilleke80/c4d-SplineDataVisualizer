@@ -1,8 +1,15 @@
 generated
+
 xcshareddata
 xcuserdata
-
 *.xcworkspace
+*.xcworkspacedata
+*.xcsettings
+*.xcuserstate
+*.xcbkptlist
+*.xcscheme
+*.plist
+
 *.txt
 *.xlib
 *.xdl64
