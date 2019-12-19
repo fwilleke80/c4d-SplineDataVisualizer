@@ -1,4 +1,6 @@
 generated
+xcshareddata
+xcuserdata
 
 *.txt
 *.xlib
