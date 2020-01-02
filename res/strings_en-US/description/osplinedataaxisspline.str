@@ -1,0 +1,12 @@
+STRINGTABLE Osplinedataaxisspline
+{
+	Osplinedataaxisspline           "SplineData Axis Spline";
+
+	OSPLINEDATAAXIS_WIDTH           "Width";
+	OSPLINEDATAAXIS_HEIGHT          "Height";
+	OSPLINEDATAAXIS_OVERSHOOT       "Overshoot";
+	OSPLINEDATAAXIS_ARROWS          "Draw Arrows";
+	OSPLINEDATAAXIS_ARROW_HEIGHT    "Arrow Height";
+	OSPLINEDATAAXIS_ARROW_WIDTH     "Arrow Width";
+	OSPLINEDATAAXIS_ARROW_OVERSHOOT "Arrow Overshoot";
+}
