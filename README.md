@@ -1,46 +1,46 @@
 # c4d-SplineDataVisualizer
 Render SplineData curves!
 
-# Components
+## Components
 
-## SplineData Spline Object
+### SplineData Spline Object
 A Spline Object that visualizes data from a SplineData GUI gadget.
 
-### SplineData
+#### SplineData
 The spline curve.
 
-### Width, Height
+#### Width, Height
 Dimensions of the generated spline.
 
-### Subdivisions
+#### Subdivisions
 The number of subdivisions in the generated spline. The SplineData is sampled at each subdivision point.
 
-## SplineData Axis Spline Object
+### SplineData Axis Spline Object
 A Spline Object that displays a 2-axis coordinate system with optional arrows
 
-### Width, Height
+#### Width, Height
 Dimensions of the generated system.
 
-### Overshoot
+#### Overshoot
 Make axes overshoot the origin point.
 
-### Draw Arrows
+#### Draw Arrows
 Enable to draw arrows.
 
-### Arrow Width, Arrow Height
+#### Arrow Width, Arrow Height
 Dimensions of the generated arrows.
 
-### Arrow Overshoot
+#### Arrow Overshoot
 Move arrows along axis ends, axis will adapt automatically.
 
-## Create SplineData Visualization Command
+### Create SplineData Visualization Command
 One command to build a complete setup with SplineData Spline, Axis Spline, and text. Ready to render.
 
-# Known bugs
+## Known bugs
 * Some of the standard `SplineObject` parameters do not seem to work as expected.
 
-# License
+## License
 Published unter GPL 3.0
 
-# Contributors
+## Contributors
 * Frank Willeke (https://github.com/fwilleke80)
