@@ -1,8 +1,13 @@
 #include "main.h"
+#include "commons.h"
 
 Bool PluginStart()
 {
+	if (!RegisterSplineDataVisCommand())
+		return false;
 	if (!RegisterSplineDataSpline())
+		return false;
+	if (!RegisterSplineDataAxisSpline())
 		return false;
 
 	return true;

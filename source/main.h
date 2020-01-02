@@ -4,5 +4,7 @@
 #include "c4d.h"
 
 Bool RegisterSplineDataSpline();
+Bool RegisterSplineDataAxisSpline();
+Bool RegisterSplineDataVisCommand();
 
 #endif // MAIN_H__

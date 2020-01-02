@@ -1,8 +1,9 @@
+// Includes from API
 #include "c4d_baseobject.h"
 #include "c4d_includes.h"
 #include "c4d_objectdata.h"
 
-// Includes from cinema4dsdk
+// Includes from plugin project
 #include "c4d_symbols.h"
 #include "main.h"
 
@@ -10,18 +11,18 @@
 #include "osplinedataspline.h"
 #include "c4d_resource.h"
 
+// Common values
+#include "commons.h"
 
-static const Int32 ID_OBJECTDATA_SPLINEDATASPLINE = 1054229;
 
-
-namespace SplineDataSplineHelpers
+namespace SplineDataVisualizationHelpers
 {
 	//----------------------------------------------------------------------------------------
 	/// Struct to hold spline generation parameters
 	//----------------------------------------------------------------------------------------
 	struct SplineDataSplineParameters
 	{
-		Float height;
+		Float amplitude;
 		Float width;
 		UInt32 samples;
 		SplineData *splineData;
@@ -33,25 +34,27 @@ namespace SplineDataSplineHelpers
 		Float splineSubAngle;
 		Float splineSubMaxLength;
 
-		SplineDataSplineParameters() : height(0.0), width(0.0), samples(0), splineData(nullptr),
-		                               closed(false), splineType(SPLINETYPE::LINEAR),
-		                               splineInterpolation(SPLINEOBJECT_INTERPOLATION_NONE),
-		                               splineSubdivision(0), splineSubAngle(0.0),
-		                               splineSubMaxLength(0.0)
+		/// \brief Default constructor
+		SplineDataSplineParameters() : amplitude(0.0), width(0.0), samples(0), splineData(nullptr),
+			closed(false), splineType(SPLINETYPE::LINEAR),
+			splineInterpolation(SPLINEOBJECT_INTERPOLATION_NONE),
+			splineSubdivision(0), splineSubAngle(0.0),
+			splineSubMaxLength(0.0)
 		{
 		}
 
-		SplineDataSplineParameters(Float _height,
-		                           Float _width,
-		                           UInt32 _samples,
-		                           SplineData *_splineData,
-		                           Bool _closed,
-		                           SPLINETYPE _splineType,
-		                           Int32 _splineInterpolation,
-		                           Int32 _splineSubdivision,
-		                           Float _splineSubAngle,
-		                           Float _splineSubMaxLength) :
-			height(_height), width(_width),
+		/// \brief Contruct from values
+		SplineDataSplineParameters(Float _amplitude,
+															 Float _width,
+															 UInt32 _samples,
+															 SplineData *_splineData,
+															 Bool _closed,
+															 SPLINETYPE _splineType,
+															 Int32 _splineInterpolation,
+															 Int32 _splineSubdivision,
+															 Float _splineSubAngle,
+															 Float _splineSubMaxLength) :
+			amplitude(_amplitude), width(_width),
 			samples(_samples), splineData(_splineData),
 			closed(_closed), splineType(_splineType),
 			splineInterpolation(_splineInterpolation),
@@ -88,8 +91,8 @@ namespace SplineDataSplineHelpers
 		}
 
 		// Set the number of segments
-		const Int32 crvsCnt = 1;
-		if (!splineObj.MakeVariableTag(Tsegment, crvsCnt))
+		const Int32 segmentCount = 1;
+		if (!splineObj.MakeVariableTag(Tsegment, segmentCount))
 			return maxon::UnexpectedError(MAXON_SOURCE_LOCATION);
 
 		// Access the writable array of the points representing the curve passing points
@@ -102,7 +105,7 @@ namespace SplineDataSplineHelpers
 		{
 			Float samplePos = (Float)pointIndex / ((Float)params.samples - 1);
 			Float splineValue = params.splineData->GetPoint(samplePos).y;
-			splinePntsPtr[pointIndex] = Vector(samplePos * params.width, splineValue * params.height, 0.0);
+			splinePntsPtr[pointIndex] = Vector(samplePos * params.width, splineValue * params.amplitude, 0.0);
 		}
 
 		// Access the curve's segments array.
@@ -148,9 +151,9 @@ Bool SplineDataSplineObject::Init(GeListNode* node)
 	BaseContainer* objectDataPtr = baseObjectPtr->GetDataInstance();
 
 	// Fill object container with initial values
-	objectDataPtr->SetFloat(OSPLINEDATA_WIDTH, 100.0);
-	objectDataPtr->SetFloat(OSPLINEDATA_HEIGHT, 20.0);
-	objectDataPtr->SetUInt32(OSPLINEDATA_SUBDIVISION, 50);
+	objectDataPtr->SetFloat(OSPLINEDATA_WIDTH, SplineDataVisualizationHelpers::DEFAULT_WIDTH);
+	objectDataPtr->SetFloat(OSPLINEDATA_HEIGHT, SplineDataVisualizationHelpers::DEFAULT_HEIGHT);
+	objectDataPtr->SetUInt32(OSPLINEDATA_SUBDIVISION, SplineDataVisualizationHelpers::DEFAULT_SPLINEDATA_SUBDIVISION);
 
 	GeData geSplineData(CUSTOMDATATYPE_SPLINE, DEFAULTVALUE);
 	SplineData *splineData = (SplineData*)geSplineData.GetCustomDataType(CUSTOMDATATYPE_SPLINE);
@@ -204,9 +207,9 @@ SplineObject* SplineDataSplineObject::GetContour(BaseObject *op, BaseDocument *d
 	BaseContainer* objectDataPtr = op->GetDataInstance();
 
 	// Fill the retrieve BaseContainer object with initial values.
-	const Float width = objectDataPtr->GetFloat(OSPLINEDATA_WIDTH, 0.0);
-	const Float height = objectDataPtr->GetFloat(OSPLINEDATA_HEIGHT, 0.0);
-	const UInt32 samples = objectDataPtr->GetUInt32(OSPLINEDATA_SUBDIVISION, 2) + 1;
+	const Float width = objectDataPtr->GetFloat(OSPLINEDATA_WIDTH, SplineDataVisualizationHelpers::DEFAULT_WIDTH);
+	const Float amplitude = objectDataPtr->GetFloat(OSPLINEDATA_HEIGHT, SplineDataVisualizationHelpers::DEFAULT_HEIGHT);
+	const UInt32 samples = objectDataPtr->GetUInt32(OSPLINEDATA_SUBDIVISION, SplineDataVisualizationHelpers::DEFAULT_SPLINEDATA_SUBDIVISION) + 1;
 	GeData geSplineData = objectDataPtr->GetData(OSPLINEDATA_SPLINECURVE);
 	SplineData *splineData = (SplineData*)geSplineData.GetCustomDataType(CUSTOMDATATYPE_SPLINE);
 	if (!splineData)
@@ -220,7 +223,7 @@ SplineObject* SplineDataSplineObject::GetContour(BaseObject *op, BaseDocument *d
 	const Float splineMaxLength = objectDataPtr->GetFloat(SPLINEOBJECT_MAXIMUMLENGTH, 0.0);
 
 	// Set parameters to params set
-	SplineDataSplineHelpers::SplineDataSplineParameters params(height, width, samples, splineData, closed, splineType, splineInterpolation, splineSubdivision, splineAngle, splineMaxLength);
+	SplineDataVisualizationHelpers::SplineDataSplineParameters params(amplitude, width, samples, splineData, closed, splineType, splineInterpolation, splineSubdivision, splineAngle, splineMaxLength);
 
 	// Alloc a SplineObject and check it.
 	SplineObject* splineObjPtr = SplineObject::Alloc(params.samples, params.splineType);
@@ -228,7 +231,7 @@ SplineObject* SplineDataSplineObject::GetContour(BaseObject *op, BaseDocument *d
 		return nullptr;
 
 	// Invoke the helper function to set the SplineObject object member accordingly
-	iferr (SplineDataSplineHelpers::CreateSplineDataSpline(*splineObjPtr, params))
+	iferr (SplineDataVisualizationHelpers::CreateSplineDataSpline(*splineObjPtr, params))
 	{
 		DiagnosticOutput("Error on CreateSplineDataSpline: @", err);
 		SplineObject::Free(splineObjPtr);
@@ -273,5 +276,5 @@ Bool RegisterSplineDataSpline()
 	if (!registeredName.IsPopulated())
 		return false;
 
-	return RegisterObjectPlugin(ID_OBJECTDATA_SPLINEDATASPLINE, registeredName, OBJECT_GENERATOR|OBJECT_ISSPLINE, SplineDataSplineObject::Alloc, "osplinedataspline"_s, AutoBitmap("osplinedataspline.tif"_s), 0);
+	return RegisterObjectPlugin(SplineDataVisualizationHelpers::ID_OBJECTDATA_SPLINEDATASPLINE, registeredName, OBJECT_GENERATOR|OBJECT_ISSPLINE, SplineDataSplineObject::Alloc, "osplinedataspline"_s, AutoBitmap("osplinedataspline.tif"_s), 0);
 }
