@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{88B4AB70-6575-5E4F-0009-38CB8C5CDEA3}</ProjectGuid>
+    <ProjectGuid>{ADECC52C-87F0-4DD7-0009-38CB8C5CDEA3}</ProjectGuid>
     <RootNamespace>maxon</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
@@ -118,12 +118,16 @@
   <ItemGroup>
     <ClCompile Include="..\generated\hxx\interface_registration.cpp" />
     <ClCompile Include="..\generated\hxx\register.cpp" />
+    <ClCompile Include="..\source\command\commanddata_buildsplinedatavis.cpp" />
     <ClCompile Include="..\source\main.cpp" />
+    <ClCompile Include="..\source\object\objectdata_splinedataaxisspline.cpp" />
     <ClCompile Include="..\source\object\objectdata_splinedataspline.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\res\c4d_symbols.h" />
+    <ClInclude Include="..\res\description\osplinedataaxisspline.h" />
     <ClInclude Include="..\res\description\osplinedataspline.h" />
+    <ClInclude Include="..\source\commons.h" />
     <ClInclude Include="..\source\main.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
