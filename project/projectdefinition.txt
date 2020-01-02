@@ -15,4 +15,4 @@ stylecheck.enum-registration=false
 stylecheck.enum-class=false
 
 // Custom ID
-ModuleId=de.frankwilleke.plugins.splinedataspline
+ModuleId=de.frankwilleke.plugins.splinedatavisualizer
