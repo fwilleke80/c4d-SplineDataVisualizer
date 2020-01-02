@@ -73,7 +73,6 @@
 		01CD9B7223BDF1B5003DC657 /* commons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = commons.h; sourceTree = "<group>"; };
 		01CD9B7523BDFCA4003DC657 /* commanddata_buildsplinedatavis.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = commanddata_buildsplinedatavis.cpp; sourceTree = "<group>"; };
 		A08C5CDEA3EB9D50CB7B0000 /* splinedatavisualizer.xlib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = splinedatavisualizer.xlib; sourceTree = BUILT_PRODUCTS_DIR; };
-		A08C5CDEA3EB9D50CB7B0100 /* libsplinedatasplineobject_static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsplinedatasplineobject_static.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0EB9D50CB00000000000000 /* debugbase.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = debugbase.xcconfig; path = ../../../frameworks/settings/debugbase.xcconfig; sourceTree = SOURCE_ROOT; };
 		A0EB9D50CB00000000050000 /* releasebase.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = releasebase.xcconfig; path = ../../../frameworks/settings/releasebase.xcconfig; sourceTree = SOURCE_ROOT; };
 		A0EB9D50CB1837B5E7000000 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
@@ -144,7 +143,6 @@
 		A0EB9D50CB00000000230000 /* products */ = {
 			isa = PBXGroup;
 			children = (
-				A08C5CDEA3EB9D50CB7B0100 /* libsplinedatasplineobject_static.a */,
 				A08C5CDEA3EB9D50CB7B0000 /* splinedatavisualizer.xlib */,
 			);
 			name = products;
