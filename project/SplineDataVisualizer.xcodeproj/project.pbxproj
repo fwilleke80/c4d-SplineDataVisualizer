@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01CD9B6D23BDECAA003DC657 /* objectdata_splinedataaxisspline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01CD9B6C23BDECAA003DC657 /* objectdata_splinedataaxisspline.cpp */; };
+		01CD9B6F23BDF02D003DC657 /* osplinedataaxisspline.h in Headers */ = {isa = PBXBuildFile; fileRef = 01CD9B6E23BDF02D003DC657 /* osplinedataaxisspline.h */; };
+		01CD9B7023BDF036003DC657 /* osplinedataspline.h in Headers */ = {isa = PBXBuildFile; fileRef = A0EB9D50CB5B1AB833000000 /* osplinedataspline.h */; };
+		01CD9B7123BDF039003DC657 /* c4d_symbols.h in Headers */ = {isa = PBXBuildFile; fileRef = A0EB9D50CB448F46FA000000 /* c4d_symbols.h */; };
+		01CD9B7323BDF1B5003DC657 /* commons.h in Headers */ = {isa = PBXBuildFile; fileRef = 01CD9B7223BDF1B5003DC657 /* commons.h */; };
+		01CD9B7723BDFCA4003DC657 /* commanddata_buildsplinedatavis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01CD9B7523BDFCA4003DC657 /* commanddata_buildsplinedatavis.cpp */; };
 		A0EB9D50CB6542540E010000 /* libmesh_misc.framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EB9D50CB6542540E000000 /* libmesh_misc.framework.a */; };
 		A0EB9D50CB70E6BBFB010000 /* objectdata_splinedataspline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0EB9D50CB70E6BBFB000000 /* objectdata_splinedataspline.cpp */; };
 		A0EB9D50CBD80552BB010000 /* interface_registration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0EB9D50CBD80552BB000000 /* interface_registration.cpp */; };
@@ -24,13 +30,6 @@
 			remoteGlobalIDString = A08C5CDEA36542540E7B0000;
 			remoteInfo = mesh_misc.framework;
 		};
-		A0EB9D50CB6542540E040100 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A0EB9D50CB6542540E020000 /* mesh_misc.framework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A08C5CDEA36542540E7B0100;
-			remoteInfo = "mesh_misc.framework static library";
-		};
 		A0EB9D50CB6542540E050000 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A0EB9D50CB6542540E020000 /* mesh_misc.framework.xcodeproj */;
@@ -44,13 +43,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = A08C5CDEA3F470FF417B0000;
 			remoteInfo = cinema.framework;
-		};
-		A0EB9D50CBF470FF41040100 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A0EB9D50CBF470FF41020000 /* cinema.framework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A08C5CDEA3F470FF417B0100;
-			remoteInfo = "cinema.framework static library";
 		};
 		A0EB9D50CBF470FF41050000 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -66,13 +58,6 @@
 			remoteGlobalIDString = A08C5CDEA3F4AB3A6F7B0000;
 			remoteInfo = core.framework;
 		};
-		A0EB9D50CBF4AB3A6F040100 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A0EB9D50CBF4AB3A6F020000 /* core.framework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A08C5CDEA3F4AB3A6F7B0100;
-			remoteInfo = "core.framework static library";
-		};
 		A0EB9D50CBF4AB3A6F050000 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A0EB9D50CBF4AB3A6F020000 /* core.framework.xcodeproj */;
@@ -83,18 +68,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A08C5CDEA3EB9D50CB7B0000 /* splinedatasplineobject.xlib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = splinedatasplineobject.xlib; sourceTree = BUILT_PRODUCTS_DIR; };
+		01CD9B6C23BDECAA003DC657 /* objectdata_splinedataaxisspline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = objectdata_splinedataaxisspline.cpp; sourceTree = "<group>"; };
+		01CD9B6E23BDF02D003DC657 /* osplinedataaxisspline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = osplinedataaxisspline.h; sourceTree = "<group>"; };
+		01CD9B7223BDF1B5003DC657 /* commons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = commons.h; sourceTree = "<group>"; };
+		01CD9B7523BDFCA4003DC657 /* commanddata_buildsplinedatavis.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = commanddata_buildsplinedatavis.cpp; sourceTree = "<group>"; };
+		A08C5CDEA3EB9D50CB7B0000 /* splinedatavisualizer.xlib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = splinedatavisualizer.xlib; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08C5CDEA3EB9D50CB7B0100 /* libsplinedatasplineobject_static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsplinedatasplineobject_static.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0EB9D50CB00000000000000 /* debugbase.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = debugbase.xcconfig; path = ../../../frameworks/settings/debugbase.xcconfig; sourceTree = SOURCE_ROOT; };
 		A0EB9D50CB00000000050000 /* releasebase.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = releasebase.xcconfig; path = ../../../frameworks/settings/releasebase.xcconfig; sourceTree = SOURCE_ROOT; };
-		A0EB9D50CB1837B5E7000000 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = main.h; path = ../source/main.h; sourceTree = SOURCE_ROOT; };
+		A0EB9D50CB1837B5E7000000 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		A0EB9D50CB448F46FA000000 /* c4d_symbols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c4d_symbols.h; path = ../res/c4d_symbols.h; sourceTree = SOURCE_ROOT; };
 		A0EB9D50CB5B1AB833000000 /* osplinedataspline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osplinedataspline.h; path = ../res/description/osplinedataspline.h; sourceTree = SOURCE_ROOT; };
 		A0EB9D50CB6542540E020000 /* mesh_misc.framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mesh_misc.framework.xcodeproj; path = ../../../frameworks/mesh_misc.framework/project/mesh_misc.framework.xcodeproj; sourceTree = SOURCE_ROOT; };
-		A0EB9D50CB70E6BBFB000000 /* objectdata_splinedataspline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = objectdata_splinedataspline.cpp; path = ../source/object/objectdata_splinedataspline.cpp; sourceTree = SOURCE_ROOT; };
+		A0EB9D50CB70E6BBFB000000 /* objectdata_splinedataspline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = objectdata_splinedataspline.cpp; sourceTree = "<group>"; };
 		A0EB9D50CBD80552BB000000 /* interface_registration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = interface_registration.cpp; path = ../generated/hxx/interface_registration.cpp; sourceTree = SOURCE_ROOT; };
 		A0EB9D50CBD93CCD9F000000 /* register.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = register.cpp; path = ../generated/hxx/register.cpp; sourceTree = SOURCE_ROOT; };
-		A0EB9D50CBE921D362000000 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../source/main.cpp; sourceTree = SOURCE_ROOT; };
+		A0EB9D50CBE921D362000000 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A0EB9D50CBF470FF41020000 /* cinema.framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cinema.framework.xcodeproj; path = ../../../frameworks/cinema.framework/project/cinema.framework.xcodeproj; sourceTree = SOURCE_ROOT; };
 		A0EB9D50CBF4AB3A6F020000 /* core.framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.framework.xcodeproj; path = ../../../frameworks/core.framework/project/core.framework.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -113,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01CD9B7423BDFC87003DC657 /* command */ = {
+			isa = PBXGroup;
+			children = (
+				01CD9B7523BDFCA4003DC657 /* commanddata_buildsplinedatavis.cpp */,
+			);
+			path = command;
+			sourceTree = "<group>";
+		};
 		A0EB9D50CB00000000140000 /* libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,9 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				A0EB9D50CB00000000190000 /* configurations */,
-				A0EB9D50CB111A998F000000 /* generated */,
 				A0EB9D50CB00000000140000 /* libs */,
 				A0EB9D50CB00000000230000 /* products */,
+				A0EB9D50CB111A998F000000 /* generated */,
 				A0EB9D50CB0001B8A0000000 /* res */,
 				A0EB9D50CBCA90681B000000 /* source */,
 			);
@@ -148,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				A08C5CDEA3EB9D50CB7B0100 /* libsplinedatasplineobject_static.a */,
-				A08C5CDEA3EB9D50CB7B0000 /* splinedatasplineobject.xlib */,
+				A08C5CDEA3EB9D50CB7B0000 /* splinedatavisualizer.xlib */,
 			);
 			name = products;
 			sourceTree = "<group>";
@@ -175,15 +172,16 @@
 		A0EB9D50CB1BAFD7B3000000 /* object */ = {
 			isa = PBXGroup;
 			children = (
+				01CD9B6C23BDECAA003DC657 /* objectdata_splinedataaxisspline.cpp */,
 				A0EB9D50CB70E6BBFB000000 /* objectdata_splinedataspline.cpp */,
 			);
-			name = object;
-			path = ../source/object;
-			sourceTree = SOURCE_ROOT;
+			path = object;
+			sourceTree = "<group>";
 		};
 		A0EB9D50CB47E4A90D000000 /* description */ = {
 			isa = PBXGroup;
 			children = (
+				01CD9B6E23BDF02D003DC657 /* osplinedataaxisspline.h */,
 				A0EB9D50CB5B1AB833000000 /* osplinedataspline.h */,
 			);
 			name = description;
@@ -194,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				A0EB9D50CB6542540E000000 /* libmesh_misc.framework.a */,
-				A0EB9D50CB6542540E000100 /* libmesh_misc.framework_static.a */,
 			);
 			name = products;
 			sourceTree = "<group>";
@@ -212,6 +209,8 @@
 		A0EB9D50CBCA90681B000000 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				01CD9B7223BDF1B5003DC657 /* commons.h */,
+				01CD9B7423BDFC87003DC657 /* command */,
 				A0EB9D50CB1BAFD7B3000000 /* object */,
 				A0EB9D50CBE921D362000000 /* main.cpp */,
 				A0EB9D50CB1837B5E7000000 /* main.h */,
@@ -224,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				A0EB9D50CBF470FF41000000 /* libcinema.framework.a */,
-				A0EB9D50CBF470FF41000100 /* libcinema.framework_static.a */,
 			);
 			name = products;
 			sourceTree = "<group>";
@@ -233,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				A0EB9D50CBF4AB3A6F000000 /* libcore.framework.a */,
-				A0EB9D50CBF4AB3A6F000100 /* libcore.framework_static.a */,
 			);
 			name = products;
 			sourceTree = "<group>";
@@ -245,15 +242,19 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CD9B7123BDF039003DC657 /* c4d_symbols.h in Headers */,
+				01CD9B7023BDF036003DC657 /* osplinedataspline.h in Headers */,
+				01CD9B6F23BDF02D003DC657 /* osplinedataaxisspline.h in Headers */,
+				01CD9B7323BDF1B5003DC657 /* commons.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A08C5CDEA3EB9D50CB000000 /* splinedatasplineobject */ = {
+		A08C5CDEA3EB9D50CB000000 /* splinedatavisualizer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0EB9D50CB00000000460000 /* Build configuration list for PBXNativeTarget "splinedatasplineobject" */;
+			buildConfigurationList = A0EB9D50CB00000000460000 /* Build configuration list for PBXNativeTarget "splinedatavisualizer" */;
 			buildPhases = (
 				A0EB9D50CB00000000690000 /* Run Source Processor */,
 				A0EB9D50CB00000000320000 /* Sources */,
@@ -267,9 +268,9 @@
 				A0EB9D50CBF4AB3A6F370000 /* PBXTargetDependency */,
 				A0EB9D50CB6542540E370000 /* PBXTargetDependency */,
 			);
-			name = splinedatasplineobject;
+			name = splinedatavisualizer;
 			productName = splinedatasplineobject;
-			productReference = A08C5CDEA3EB9D50CB7B0000 /* splinedatasplineobject.xlib */;
+			productReference = A08C5CDEA3EB9D50CB7B0000 /* splinedatavisualizer.xlib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -280,7 +281,7 @@
 			attributes = {
 				LastUpgradeCheck = 1099;
 			};
-			buildConfigurationList = A0EB9D50CB00000000410000 /* Build configuration list for PBXProject "splinedatasplineobject" */;
+			buildConfigurationList = A0EB9D50CB00000000410000 /* Build configuration list for PBXProject "SplineDataVisualizer" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -306,7 +307,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				A08C5CDEA3EB9D50CB000000 /* splinedatasplineobject */,
+				A08C5CDEA3EB9D50CB000000 /* splinedatavisualizer */,
 			);
 		};
 /* End PBXProject section */
@@ -319,13 +320,6 @@
 			remoteRef = A0EB9D50CB6542540E040000 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A0EB9D50CB6542540E000100 /* libmesh_misc.framework_static.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libmesh_misc.framework_static.a;
-			remoteRef = A0EB9D50CB6542540E040100 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		A0EB9D50CBF470FF41000000 /* libcinema.framework.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -333,25 +327,11 @@
 			remoteRef = A0EB9D50CBF470FF41040000 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A0EB9D50CBF470FF41000100 /* libcinema.framework_static.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libcinema.framework_static.a;
-			remoteRef = A0EB9D50CBF470FF41040100 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		A0EB9D50CBF4AB3A6F000000 /* libcore.framework.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libcore.framework.a;
 			remoteRef = A0EB9D50CBF4AB3A6F040000 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A0EB9D50CBF4AB3A6F000100 /* libcore.framework_static.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libcore.framework_static.a;
-			remoteRef = A0EB9D50CBF4AB3A6F040100 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -379,9 +359,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CD9B6D23BDECAA003DC657 /* objectdata_splinedataaxisspline.cpp in Sources */,
 				A0EB9D50CB70E6BBFB010000 /* objectdata_splinedataspline.cpp in Sources */,
 				A0EB9D50CBD80552BB010000 /* interface_registration.cpp in Sources */,
 				A0EB9D50CBD93CCD9F010000 /* register.cpp in Sources */,
+				01CD9B7723BDFCA4003DC657 /* commanddata_buildsplinedatavis.cpp in Sources */,
 				A0EB9D50CBE921D362010000 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,7 +448,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A0EB9D50CB00000000410000 /* Build configuration list for PBXProject "splinedatasplineobject" */ = {
+		A0EB9D50CB00000000410000 /* Build configuration list for PBXProject "SplineDataVisualizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0EB9D50CB000000004B0000 /* Debug */,
@@ -475,7 +457,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		A0EB9D50CB00000000460000 /* Build configuration list for PBXNativeTarget "splinedatasplineobject" */ = {
+		A0EB9D50CB00000000460000 /* Build configuration list for PBXNativeTarget "splinedatavisualizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0EB9D50CB000000005A0000 /* Debug */,
