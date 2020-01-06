@@ -1,4 +1,4 @@
-# c4d-SplineDataVisualizer
+# SplineDataVisualizer
 Render SplineData curves!
 
 ## Components
@@ -32,6 +32,9 @@ Dimensions of the generated arrows.
 
 #### Arrow Overshoot
 Move arrows along axis ends, axis will adapt automatically.
+
+### Face Camera Tag
+A simple tag that will inherit the active camera's alignment and apply it to the object it's attached to, while preserving the position and scale of the object. Long story short, the object carrying the tag will always face the camera, but can be freely moved and scaled in the viewport.
 
 ### Create SplineData Visualization Command
 One command to build a complete setup with SplineData Spline, Axis Spline, and text. Ready to render.
