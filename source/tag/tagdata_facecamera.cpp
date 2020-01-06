@@ -18,7 +18,7 @@
 
 namespace SplineDataVisualizationHelpers
 {
-	inline maxon::Result<Matrix> InheritCameraMatrix(BaseDocument *doc, const Matrix &objectMatrix, Bool reverseZ)
+	inline maxon::Result<Matrix> InheritCameraMatrix(BaseDocument *doc, const Matrix &objectMatrix, Bool reverse)
 	{
 		//  Get active camera (use Editor camera if no user camera available)
 		BaseDraw* bd = doc->GetRenderBaseDraw();
@@ -32,7 +32,15 @@ namespace SplineDataVisualizationHelpers
 
 		Matrix camMg = cam->GetMg();
 		const Vector opScale = objectMatrix.sqmat.GetScale();
-		return Matrix(objectMatrix.off, !camMg.sqmat.v1 * opScale.x, !camMg.sqmat.v2 * opScale.y, !(reverseZ ? (camMg.sqmat.v3 * -1.0) : camMg.sqmat.v3) * opScale.z);
+		Matrix resultMatrix (objectMatrix.off, !camMg.sqmat.v1 * opScale.x, !camMg.sqmat.v2 * opScale.y, !camMg.sqmat.v3 * opScale.z);
+
+		if (reverse)
+		{
+			resultMatrix.sqmat.v1 *= -1.0;
+			resultMatrix.sqmat.v3 *= -1.0;
+		}
+
+		return resultMatrix;
 	}
 }
 
@@ -90,9 +98,9 @@ EXECUTIONRESULT FaceCameraTag::Execute(BaseTag* tag, BaseDocument* doc, BaseObje
 	BaseContainer *tagDataPtr = tag->GetDataInstance();
 	if (!tagDataPtr)
 		return EXECUTIONRESULT::OUTOFMEMORY;
-	Bool reverseZ = tagDataPtr->GetBool(FACECAMERATAG_REVERSE, false);
+	Bool reverse = tagDataPtr->GetBool(FACECAMERATAG_REVERSE, false);
 
-	Matrix resultMatrix = SplineDataVisualizationHelpers::InheritCameraMatrix(doc, op->GetMg(), reverseZ) iferr_return;
+	Matrix resultMatrix = SplineDataVisualizationHelpers::InheritCameraMatrix(doc, op->GetMg(), reverse) iferr_return;
 	op->SetMg(resultMatrix);
 
 	return EXECUTIONRESULT::OK;
