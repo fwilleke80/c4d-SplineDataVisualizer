@@ -6,5 +6,6 @@
 Bool RegisterSplineDataSpline();
 Bool RegisterSplineDataAxisSpline();
 Bool RegisterSplineDataVisCommand();
+Bool RegisterFaceCameraTag();
 
 #endif // MAIN_H__

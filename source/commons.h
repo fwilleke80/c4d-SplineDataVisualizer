@@ -8,6 +8,7 @@ namespace SplineDataVisualizationHelpers
 	static const Int32 ID_OBJECTDATA_SPLINEDATAAXISSPLINE = 1054271;
 	static const Int32 ID_COMMANDDATA_SPLINEDATAVIS = 1054272;
 	static const Int32 ID_SPLINEDATAVIS_SEPARATOR = 1054273;
+	static const Int32 ID_FACECAMERA = 1054290;
 
 	// General defaults
 	const Float DEFAULT_WIDTH = 200.0;

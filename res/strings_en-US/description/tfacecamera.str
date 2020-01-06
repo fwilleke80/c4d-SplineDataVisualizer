@@ -1,0 +1,6 @@
+STRINGTABLE Tfacecamera
+{
+	Tfacecamera              "Face Camera Tag";
+
+	FACECAMERATAG_REVERSE    "Reverse";
+}

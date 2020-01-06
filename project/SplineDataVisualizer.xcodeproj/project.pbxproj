@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		013AAFB223C33C21000DBD19 /* tagdata_facecamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 013AAFB123C33C21000DBD19 /* tagdata_facecamera.cpp */; };
+		013AAFB423C34880000DBD19 /* tfacecamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 013AAFB323C34880000DBD19 /* tfacecamera.h */; };
 		01CD9B6D23BDECAA003DC657 /* objectdata_splinedataaxisspline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01CD9B6C23BDECAA003DC657 /* objectdata_splinedataaxisspline.cpp */; };
 		01CD9B6F23BDF02D003DC657 /* osplinedataaxisspline.h in Headers */ = {isa = PBXBuildFile; fileRef = 01CD9B6E23BDF02D003DC657 /* osplinedataaxisspline.h */; };
 		01CD9B7023BDF036003DC657 /* osplinedataspline.h in Headers */ = {isa = PBXBuildFile; fileRef = A0EB9D50CB5B1AB833000000 /* osplinedataspline.h */; };
@@ -68,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		013AAFB123C33C21000DBD19 /* tagdata_facecamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tagdata_facecamera.cpp; sourceTree = "<group>"; };
+		013AAFB323C34880000DBD19 /* tfacecamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tfacecamera.h; sourceTree = "<group>"; };
 		01CD9B6C23BDECAA003DC657 /* objectdata_splinedataaxisspline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = objectdata_splinedataaxisspline.cpp; sourceTree = "<group>"; };
 		01CD9B6E23BDF02D003DC657 /* osplinedataaxisspline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = osplinedataaxisspline.h; sourceTree = "<group>"; };
 		01CD9B7223BDF1B5003DC657 /* commons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = commons.h; sourceTree = "<group>"; };
@@ -101,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		013AAFB023C33B9C000DBD19 /* tag */ = {
+			isa = PBXGroup;
+			children = (
+				013AAFB123C33C21000DBD19 /* tagdata_facecamera.cpp */,
+			);
+			path = tag;
+			sourceTree = "<group>";
+		};
 		01CD9B7423BDFC87003DC657 /* command */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +193,7 @@
 			children = (
 				01CD9B6E23BDF02D003DC657 /* osplinedataaxisspline.h */,
 				A0EB9D50CB5B1AB833000000 /* osplinedataspline.h */,
+				013AAFB323C34880000DBD19 /* tfacecamera.h */,
 			);
 			name = description;
 			path = ../res/description;
@@ -210,6 +223,7 @@
 				01CD9B7223BDF1B5003DC657 /* commons.h */,
 				01CD9B7423BDFC87003DC657 /* command */,
 				A0EB9D50CB1BAFD7B3000000 /* object */,
+				013AAFB023C33B9C000DBD19 /* tag */,
 				A0EB9D50CBE921D362000000 /* main.cpp */,
 				A0EB9D50CB1837B5E7000000 /* main.h */,
 			);
@@ -242,6 +256,7 @@
 			files = (
 				01CD9B7123BDF039003DC657 /* c4d_symbols.h in Headers */,
 				01CD9B7023BDF036003DC657 /* osplinedataspline.h in Headers */,
+				013AAFB423C34880000DBD19 /* tfacecamera.h in Headers */,
 				01CD9B6F23BDF02D003DC657 /* osplinedataaxisspline.h in Headers */,
 				01CD9B7323BDF1B5003DC657 /* commons.h in Headers */,
 			);
@@ -358,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01CD9B6D23BDECAA003DC657 /* objectdata_splinedataaxisspline.cpp in Sources */,
+				013AAFB223C33C21000DBD19 /* tagdata_facecamera.cpp in Sources */,
 				A0EB9D50CB70E6BBFB010000 /* objectdata_splinedataspline.cpp in Sources */,
 				A0EB9D50CBD80552BB010000 /* interface_registration.cpp in Sources */,
 				A0EB9D50CBD93CCD9F010000 /* register.cpp in Sources */,

@@ -5,6 +5,7 @@ STRINGTABLE
 {
 	IDS_OBJECTDATA_SPLINEDATASPLINE      "SplineData Spline";
 	IDS_OBJECTDATA_SPLINEDATAAXISSPLINE  "SplineData Axis Spline";
+	IDS_TAGDATA_FACECAMERA               "Face Camera";
 	IDS_COMMANDDATA_SPLINEDATAVIS        "Create SplineData Visualization";
 	IDH_COMMANDDATA_SPLINEDATAVIS        "Create a Complete SplineData Visualization Group";
 

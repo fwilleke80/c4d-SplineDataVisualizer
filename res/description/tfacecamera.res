@@ -1,0 +1,10 @@
+CONTAINER Tfacecamera
+{
+	NAME Tfacecamera;
+	INCLUDE Texpression;
+
+	GROUP ID_TAGPROPERTIES
+	{
+		BOOL FACECAMERATAG_REVERSE { }
+	}
+}

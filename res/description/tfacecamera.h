@@ -1,0 +1,9 @@
+#ifndef TFACECAMERA_H__
+#define TFACECAMERA_H__
+
+enum
+{
+	FACECAMERATAG_REVERSE    = 10001
+};
+
+#endif // TFACECAMERA_H__

@@ -9,6 +9,8 @@ Bool PluginStart()
 		return false;
 	if (!RegisterSplineDataAxisSpline())
 		return false;
+	if (!RegisterFaceCameraTag())
+		return false;
 
 	return true;
 }

@@ -150,18 +150,23 @@ public:
 		doc->InsertMaterial(textMat);
 
 		// Apply material to objects
-		TextureTag *textureTag = static_cast<TextureTag*>(splineDataSweepObject->MakeTag(Ttexture));
-		if (!textureTag)
+		TextureTag *textureTagSweep = static_cast<TextureTag*>(splineDataSweepObject->MakeTag(Ttexture));
+		if (!textureTagSweep)
 			return false;
-		textureTag->SetMaterial(splineDataMat);
-		textureTag = static_cast<TextureTag*>(axisSweepObject->MakeTag(Ttexture));
-		if (!textureTag)
+		textureTagSweep->SetMaterial(splineDataMat);
+		TextureTag *textureTagSweep2 = static_cast<TextureTag*>(axisSweepObject->MakeTag(Ttexture));
+		if (!textureTagSweep2)
 			return false;
-		textureTag->SetMaterial(axisMat);
-		textureTag = static_cast<TextureTag*>(textExtrudeObject->MakeTag(Ttexture));
-		if (!textureTag)
+		textureTagSweep2->SetMaterial(axisMat);
+		TextureTag *textureTagExtrude = static_cast<TextureTag*>(textExtrudeObject->MakeTag(Ttexture));
+		if (!textureTagExtrude)
 			return false;
-		textureTag->SetMaterial(textMat);
+		textureTagExtrude->SetMaterial(textMat);
+
+		// Add Face Camera expression tag
+		BaseTag *faceCameraTag = groupObject->MakeTag(SplineDataVisualizationHelpers::ID_FACECAMERA);
+		if (!faceCameraTag)
+			return false;
 
 		// Update all created nodes
 		axisSplineObject->Message(MSG_UPDATE);
@@ -173,9 +178,13 @@ public:
 		textObject->Message(MSG_UPDATE);
 		textExtrudeObject->Message(MSG_UPDATE);
 		groupObject->Message(MSG_UPDATE);
+		textureTagSweep->Message(MSG_UPDATE);
+		textureTagSweep2->Message(MSG_UPDATE);
+		textureTagExtrude->Message(MSG_UPDATE);
 		splineDataMat->Message(MSG_UPDATE);
 		axisMat->Message(MSG_UPDATE);
 		textMat->Message(MSG_UPDATE);
+		faceCameraTag->Message(MSG_UPDATE);
 
 		EventAdd();
 		return true;
